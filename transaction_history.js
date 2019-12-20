@@ -18,7 +18,7 @@ const generateUniqueId = length =>
 
 const sendOTP = (uuid, uniqid) =>
   new Promise((resolve, reject) => {
-    const url = "https://api.gojekapi.com/v3/customers/login_with_phone";
+    const url = "https://api.gojekapi.com/v5/customers/login_with_phone";
 
     var options = {
       method: "POST",
@@ -45,7 +45,7 @@ const sendOTP = (uuid, uniqid) =>
 
 const loginVerify = (otpToken, otpLogin, uuid, uniqid) =>
   new Promise((resolve, reject) => {
-    const url = "https://api.gojekapi.com/v3/customers/login/verify";
+    const url = "https://api.gojekapi.com/v5/customers/login/verify";
 
     var options = {
       method: "POST",
